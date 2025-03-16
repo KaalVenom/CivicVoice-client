@@ -99,7 +99,23 @@ This setup process covers cloning the repository, installing dependencies, and c
 
 
 It uses bcrypt for password hashing, JWT for secure user authentication, and cookies for a seamless user experience. To contribute, familiarize yourself with these technologies and the authentication flow in the application.
-
+#Folder Structure
+```plaintext
+CIVICVOICE-CLIENT/
+├── node_modules/        # Contains all the npm dependencies
+├── public/              # Static files such as images and favicon
+├── src/                 # Source code for the application
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Application pages
+│   ├── utils/           # Utility functions and helpers
+│   ├── styles/          # CSS or styling files
+│   └── services/        # API service calls
+├── .env                 # Environment variables
+├── .gitignore           # Git ignore rules
+├── package-lock.json    # Dependency tree lock file
+├── package.json         # Project metadata and dependencies
+└── README.md            # Project documentation
+```
 
 
 
