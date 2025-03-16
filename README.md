@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# CIVICVOICE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Demo Video of sorting of Blog according to like count.
 
-## Available Scripts
+https://github.com/user-attachments/assets/507f9e5a-322e-45c8-9683-e49614b47a55
 
-In the project directory, you can run:
 
-### `npm start`
+![image](https://github.com/user-attachments/assets/a1c2439b-52d9-4f8a-8099-b163ecce2944)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+CivicVoice website is a website where you can raise your voice by writting a blog ,Having more like to your Blog will prioritize it and will be on the top.
 
-### `npm test`
+It is a MERN (MongoDB, Express.js, React, Node.js) stack application that empowers users to create, view, and search for blog posts. It incorporates robust user authentication using bcrypt, JWT, and cookies, allowing users to log in, register, and engage with the community through comments. Only the author of a post has the authority to update or delete it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To set up CivicVoice locally, follow these comprehensive steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone repository link
 
-### `npm run eject`
+2.  Install dependencies for both the client and server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    -   Navigate to the `client` directory and install client dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        `cd client
+        npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    -   Move back to the root directory and install server dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+        `cd ..
+        cd server
+        npm install`
 
-## Learn More
+2.  Configure Cloudinary for image storage:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    -   Sign up for a [Cloudinary] account.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    -   Retrieve your Cloudinary API key, API secret, and cloud name.
 
-### Code Splitting
+    -   Create a `.env` file in the `server` directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    -   Add the following variables to the `.env` file:
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+        `CLOUDINARY_CLOUD_NAME=your_cloud_name`
+        
+        `CLOUDINARY_API_KEY=your_api_key`
+        
+        `CLOUDINARY_API_SECRET=your_api_secret`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    Ensure that you replace `your_cloud_name`, `your_api_key`, and `your_api_secret` with your actual Cloudinary credentials.
 
-### Advanced Configuration
+3.  Run the application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    -   In the `client` directory:
 
-### Deployment
+        `cd client
+        npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    -   In the `server` directory:
 
-### `npm run build` fails to minify
+        `cd ..
+        cd server
+        node app.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+This setup process covers cloning the repository, installing dependencies, and configuring Cloudinary for image storage. Make sure to follow each step carefully to ensure a smooth installation process. If you encounter any issues, refer to the documentation or seek help from the community.
+
+# Features
+
+
+## User Authentication:
+
+-   Secure user authentication using bcrypt, JWT, and cookies.
+-   Login and registration functionalities.
+
+## Post Management:
+
+-   Create, update, and delete posts using React Quill for an enhanced text editor experience.
+-   Upload and display images with Cloudinary integration.
+-   View and search for posts.
+
+## Comment System:
+
+-   Users can comment on posts.
+-   Commenting requires user authentication.
+
+## Author Pages:
+
+-   Individual pages for each author, showcasing their posts.
+
+# User Authentication
+
+
+It uses bcrypt for password hashing, JWT for secure user authentication, and cookies for a seamless user experience. To contribute, familiarize yourself with these technologies and the authentication flow in the application.
+
+
+
+
